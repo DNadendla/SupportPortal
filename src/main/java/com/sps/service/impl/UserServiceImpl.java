@@ -1,4 +1,4 @@
-package com.service.impl;
+package com.sps.service.impl;
 
 import java.util.Date;
 
@@ -13,10 +13,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.repository.UserRepository;
-import com.service.UserService;
 import com.sps.model.User;
 import com.sps.model.UserPrincipal;
+import com.sps.repository.UserRepository;
+import com.sps.service.UserService;
 
 @Service
 @Transactional 

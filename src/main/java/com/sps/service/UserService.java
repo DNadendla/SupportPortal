@@ -1,4 +1,4 @@
-package com.service;
+package com.sps.service;
 
 public interface UserService {
 

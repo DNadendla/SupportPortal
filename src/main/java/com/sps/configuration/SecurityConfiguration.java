@@ -1,4 +1,4 @@
-package com.configuration;
+package com.sps.configuration;
 
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
