@@ -26,23 +26,21 @@ import com.sps.filter.JwtAuthorizationFilter;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-	private JwtAuthorizationFilter jwtAuthorizationFilter;
-	private JwtAccessDeniedHandler jwtAccessDeniedHandler;
-	private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
-	private UserDetailsService userDetailsService;
-	private BCryptPasswordEncoder bCryptPasswordEncoder;
-
 	@Autowired
-	public SecurityConfiguration(JwtAuthorizationFilter jwtAuthorizationFilter,
-			JwtAccessDeniedHandler jwtAccessDeniedHandler, JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint,
-			@Qualifier("userDetailsService") UserDetailsService userDetailsService,
-			BCryptPasswordEncoder bCryptPasswordEncoder) {
-		this.jwtAuthorizationFilter = jwtAuthorizationFilter;
-		this.jwtAccessDeniedHandler = jwtAccessDeniedHandler;
-		this.jwtAuthenticationEntryPoint = jwtAuthenticationEntryPoint;
-		this.userDetailsService = userDetailsService;
-		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-	}
+	private JwtAuthorizationFilter jwtAuthorizationFilter;
+	
+	@Autowired
+	private JwtAccessDeniedHandler jwtAccessDeniedHandler;
+	
+	@Autowired
+	private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+	
+	@Autowired
+	@Qualifier("userDetailsService")
+	private UserDetailsService userDetailsService;
+	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {

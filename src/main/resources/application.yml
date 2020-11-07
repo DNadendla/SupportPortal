@@ -16,3 +16,7 @@ spring:
    ddl-auto: update
   properties:
    dialect: org.hibernate.dialect.MySQL5Dialect
+# mvc:
+#  throw-exception-if-no-handler-found: true
+# resources:
+#  add-mappings: false
