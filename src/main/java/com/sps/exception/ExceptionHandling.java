@@ -37,7 +37,7 @@ public class ExceptionHandling implements ErrorController {
 
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
     private final Logger LOGGER2 = LoggerFactory.getLogger(getClass());
-    private final Logger LOGGER3 = LoggerFactory.getLogger(getClass());
+    private final Logger LOGGER4 = LoggerFactory.getLogger(getClass());
 
 	private static final String ACCOUNT_LOCKED		      = "Your account has been locked, Please contact Administrator";
 	
